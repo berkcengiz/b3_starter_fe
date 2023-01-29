@@ -1,3 +1,15 @@
+/*!
+Author: b3 house
+Author URI: https://berkcengiz.com
+*/
 body {
   background: red;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  line-height: 32px;
 }

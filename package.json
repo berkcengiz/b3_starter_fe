@@ -18,6 +18,7 @@
   "homepage": "https://github.com/berkcengiz/b3_starter_fe#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-minify": "^3.1.0",
     "gulp-sass": "^5.1.0"
   },
   "dependencies": {
