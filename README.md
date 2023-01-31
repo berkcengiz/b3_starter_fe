@@ -15,3 +15,8 @@ Gulp Create New Task:
 4. stream changes to all browser
 
 //------------------------------
+
+
+build alırken hatayı bastırmak
+taskleri senkron çalıştırmak (scssda hata varken diğer taskler çalışmasın)
+log kaydetmek
