@@ -32,10 +32,10 @@ npm uninstall package-name
 
 ## Gulp Create New Task
 
-- where is my scss file
-- pass that file through sass compiler
-- where do I save the compiled css ?
-- stream changes to all browser
+- Where is my scss file
+- Pass that file through sass compiler
+- Where do I save the compiled css ?
+- Stream changes to all browser
 
 ## This Will Be Improved In The New Version
 
