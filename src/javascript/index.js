@@ -3,9 +3,6 @@
     Author URI: https://berkcengiz.com
 */
 
-function App() {
-    button();
-    form();
-}
+function App() {}
 
 App();
