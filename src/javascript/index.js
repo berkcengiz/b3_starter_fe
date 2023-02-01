@@ -4,17 +4,8 @@
 */
 
 function App() {
-    $(window).on("scroll", function () {
-        return [];
-    });
-    $(window).on("resize", function () {
-        return [];
-    });
-    $(function () {
-        new LazyLoad({});
-
-        return [];
-    });
+    button();
+    form();
 }
 
 App();
