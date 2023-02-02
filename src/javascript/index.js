@@ -3,6 +3,5 @@
     Author URI: https://berkcengiz.com
 */
 
-function App() {}
-
-App();
+import LazyLoad from "./library/lazyload-init.js";
+LazyLoad();
