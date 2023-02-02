@@ -1,0 +1,30 @@
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+:empty {
+    display: none;
+}
+
+input,
+select,
+textarea,
+button {
+    appearance: none;
+    all: unset;
+
+    &:disabled {
+        pointer-events: none;
+        user-select: none;
+    }
+}
