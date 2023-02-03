@@ -9,6 +9,7 @@
 
     &:focus {
         outline: none;
+        box-shadow: none;
     }
 }
 
@@ -27,4 +28,32 @@ button {
         pointer-events: none;
         user-select: none;
     }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button,
+    &::-webkit-search-cancel-button {
+        display: none;
+        margin: 0;
+        appearance: none;
+    }
+
+    &:-webkit-autofill {
+        &,
+        &:focus {
+            box-shadow: 0 0 0 30px transparent inset;
+        }
+    }
+
+    /* Firefox */
+    &[type="number"] {
+        appearance: textfield;
+    }
+}
+
+address {
+    font-style: normal;
+}
+
+img {
+    user-select: none;
 }

@@ -14,6 +14,11 @@ body {
     letter-spacing: -0.05rem;
 }
 
+::selection {
+    background-color: helpers.$default-black;
+    color: helpers.$default-white;
+}
+
 a {
     &[href] {
         // Use Attribute Selectors with Empty Links
@@ -25,7 +30,7 @@ a {
 
         // Style "Default" Links
         &:not([class]) {
-            color: helpers.$default-blue;
+            color: helpers.$default-link;
             text-decoration: underline;
         }
     }
