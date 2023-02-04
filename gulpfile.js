@@ -5,12 +5,13 @@ const uglify = require("gulp-uglify");
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const sourcemaps = require("gulp-sourcemaps");
+const nunjucksRender = require("gulp-nunjucks-render");
 const browserSync = require("browser-sync").create();
 const { src, series, parallel, dest, watch } = require("gulp");
 
 // file paths
 const files = {
-    htmlPath: "./views/pages/**/*.html",
+    htmlPath: "./views/pages/**/*.+(html|nunjucks)",
     scssPath: "./src/scss/**/*.scss",
     jsPath: "./src/javascript/**/*.js",
     mediaPath: "./src/media/**/**",
@@ -21,6 +22,11 @@ const files = {
 function html() {
     return gulp
         .src(files.htmlPath)
+        .pipe(
+            nunjucksRender({
+                path: ["views"],
+            })
+        )
         .pipe(gulp.dest("./dist"))
         .pipe(browserSync.stream());
 }
