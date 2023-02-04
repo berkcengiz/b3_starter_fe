@@ -3,6 +3,7 @@ const sass = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const cleanCSS = require("gulp-clean-css");
+const htmlmin = require("gulp-htmlmin");
 const rename = require("gulp-rename");
 const sourcemaps = require("gulp-sourcemaps");
 const nunjucksRender = require("gulp-nunjucks-render");
@@ -27,6 +28,7 @@ function html() {
                 path: ["views"],
             })
         )
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("./dist"))
         .pipe(browserSync.stream());
 }
