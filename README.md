@@ -1,5 +1,11 @@
 # b3 house front-end starter
 
+## Clone this repository
+
+```
+$ git clone https://github.com/berkcengiz/b3_starter_fe.git
+```
+
 ## Install all NPM packages
 
 ```
