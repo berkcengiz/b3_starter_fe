@@ -1,6 +1,7 @@
 <!-- prettier-ignore -->
+{% set Url = 'https://berkcengiz.com/' %}
 {% set ProjectName = 'Project Name' %}
-{% set ProjectLang = 'tr' %}
+{% set ProjectLang = 'tr-TR' %}
 {% set ProjectDir = 'ltr' %}
 
 <!DOCTYPE html>
@@ -9,6 +10,7 @@
         <title>{{ProjectName}} | {{PageTitle}}</title>
 
         <meta charset="UTF-8" />
+        <meta name="robots" content="index,follow" />
         <meta name="language" content="{{ProjectLang}}" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,25 +19,105 @@
         <meta name="format-detection" content="address=no" />
         <meta name="format-detection" content="email=no" />
 
-        <meta name="author" content="Berk Cengiz, berkcengiiz@gmail.com" />
-        <meta name="copyright" content="Berk Cengiz" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="application-name" content="{{ProjectName}} " />
+        <meta name="apple-mobile-web-app-title" content="{{ProjectName}}" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+
+        <meta name="author" content="{{ProjectName}}" />
+        <meta name="copyright" content="{{ProjectName}}" />
         <meta name="designer" content="Berk Cengiz" />
-        <meta name="owner" content="Berk Cengiz" />
+        <meta name="owner" content="{{ProjectName}}" />
 
         <meta name="keywords" content="{{MetaKeywords}}" />
         <meta name="description" content="{{MetaDescription}}" />
 
+        <meta property="og:url" content="{{Url}}" />
         <meta name="og:title" content="{{ProjectName}} | {{PageTitle}}" />
         <meta name="og:description" content="{{MetaDescription}}" />
         <meta property="og:site_name" content="{{ProjectName}}" />
         <meta property="og:locale" content="{{ProjectLang}}" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="src/media/og/og.jpg" />
+        <meta property="og:image:width" content="960" />
+        <meta property="og:image:height" content="640" />
 
         <meta name="twitter:title" content="{{ProjectName}} | {{PageTitle}}" />
         <meta name="twitter:description" content="{{MetaDescription}}" />
         <meta name="twitter:site" content="{{ProjectName}}" />
         <meta name="twitter:image" content="src/media/og/og.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@" />
+        <meta name="twitter:creator" content="@" />
+
+        <link rel="canonical" href="{{Url}}" />
+
+        <link
+            rel="icon"
+            type="image/svg"
+            href="src/media/favicons/favicon-16x16.svg"
+            sizes="16x16"
+        />
+        <link
+            rel="icon"
+            type="image/svg"
+            href="src/media/favicons/favicon-32x32.svg"
+            sizes="32x32"
+        />
+
+        <link
+            rel="apple-touch-icon"
+            href="src/media/favicons/favicon-57x57.svg"
+            sizes="57x57"
+        />
+        <link
+            rel="apple-touch-icon"
+            href="src/media/favicons/favicon-114x114.svg"
+            sizes="114x114"
+        />
+        <link
+            rel="apple-touch-icon"
+            href="src/media/favicons/favicon-72x72.svg"
+            sizes="72x72"
+        />
+        <link
+            rel="apple-touch-icon"
+            href="src/media/favicons/favicon-144x144.svg"
+            sizes="144x144"
+        />
+        <link
+            rel="apple-touch-icon"
+            href="src/media/favicons/favicon-60x60.svg"
+            sizes="60x60"
+        />
+        <link
+            rel="apple-touch-icon"
+            href="src/media/favicons/favicon-120x120.svg"
+            sizes="120x120"
+        />
+        <link
+            rel="apple-touch-icon"
+            href="src/media/favicons/favicon-76x76.svg"
+            sizes="76x76"
+        />
+        <link
+            rel="apple-touch-icon"
+            href="src/media/favicons/favicon-152x152.svg"
+            sizes="152x152"
+        />
+
+        <link
+            rel="icon"
+            type="image/svg"
+            href="src/media/favicons/favicon-196x196.svg"
+            sizes="196x196"
+        />
+
+        <link rel="stylesheet" href="src/css/style.min.css" type="text/css" />
     </head>
     <body class="{{BodyClass}}">
         <div id="wrapper">
@@ -52,5 +134,7 @@
                 {% block scripts %}
             {% endblock %}
         </div>
+
+        <script src="src/js/core.min.js"></script>
     </body>
 </html>
