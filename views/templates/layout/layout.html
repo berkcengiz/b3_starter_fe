@@ -119,20 +119,14 @@
 
         <link rel="stylesheet" href="src/css/style.min.css" type="text/css" />
     </head>
-    <body class="{{BodyClass}}">
+    <body class="{{PageClass}}">
         <div id="wrapper">
-            <!-- prettier-ignore -->
             {% include "../partials/header.html" %}
 
-            <main class="{{MainClass}}">
-                <!-- prettier-ignore -->
-                {% block content %}{% endblock %}
-            </main>
+            <main class="{{PageClass}}">{% block content %}{% endblock %}</main>
 
-            <!-- prettier-ignore -->
-            {% include "../partials/footer.html" %}
-                {% block scripts %}
-            {% endblock %}
+            {% include "../partials/footer.html" %} {% block scripts %} {%
+            endblock %}
         </div>
 
         <script src="src/js/core.min.js"></script>
