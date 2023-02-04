@@ -14,9 +14,11 @@ const { src, series, parallel, dest, watch } = require("gulp");
 const files = {
     htmlPath: "./views/pages/**/*.+(html|nunjucks)",
     scssPath: "./src/scss/**/*.scss",
-    jsPath: "./src/javascript/**/*.js",
+    jsCorePath: "./src/javascript/**/*.js",
     mediaPath: "./src/media/**/**",
     fontPath: "./src/fonts/*",
+
+    jsLibPath: ["./node_modules/vanilla-lazyload/dist/lazyload.min.js"],
 };
 
 // html
@@ -50,11 +52,23 @@ function scss() {
         .pipe(browserSync.stream());
 }
 
-// js
-function js() {
+// jsCore
+function jsCore() {
     return gulp
-        .src(files.jsPath)
+        .src(files.jsCorePath)
         .pipe(concat("core.min.js"))
+        .pipe(uglify())
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write("."))
+        .pipe(gulp.dest("./dist/src/js"))
+        .pipe(browserSync.stream());
+}
+
+// jsLib
+function jsLib() {
+    return gulp
+        .src(files.jsLibPath)
+        .pipe(concat("lib.min.js"))
         .pipe(uglify())
         .pipe(sourcemaps.init())
         .pipe(sourcemaps.write("."))
@@ -86,15 +100,20 @@ function watchTask() {
     });
     gulp.watch(files.htmlPath, html).on("change", browserSync.reload);
     gulp.watch(files.scssPath, scss).on("change", browserSync.reload);
-    gulp.watch(files.jsPath, js).on("change", browserSync.reload);
+    gulp.watch(files.jsCorePath, jsCore).on("change", browserSync.reload);
+    gulp.watch(files.jsLibPath, jsLib).on("change", browserSync.reload);
     gulp.watch(files.fontPath, font).on("change", browserSync.reload);
     gulp.watch(files.mediaPath, media).on("change", browserSync.reload);
 }
 
 exports.html = html;
 exports.scss = scss;
-exports.js = js;
+exports.jsCore = jsCore;
+exports.jsLib = jsLib;
 exports.media = media;
 exports.font = font;
 exports.watchTask = watchTask;
-exports.default = series(parallel(html, scss, js, media, font), watchTask);
+exports.default = series(
+    parallel(html, scss, jsCore, jsLib, media, font),
+    watchTask
+);
