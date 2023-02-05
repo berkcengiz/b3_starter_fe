@@ -18,6 +18,7 @@ const files = {
     mediaPath: "./src/media/**/**",
     fontPath: "./src/fonts/*",
 
+    // library file paths
     jsLibPath: ["./node_modules/vanilla-lazyload/dist/lazyload.min.js"],
 };
 
