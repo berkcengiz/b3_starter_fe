@@ -19,7 +19,10 @@ const files = {
     fontPath: "./src/fonts/*",
 
     // library file paths
-    jsLibPath: ["./node_modules/vanilla-lazyload/dist/lazyload.min.js"],
+    jsLibPath: [
+        "./node_modules/vanilla-lazyload/dist/lazyload.min.js",
+        "./node_modules/swiper/swiper-bundle.min.js",
+    ],
 };
 
 // html
