@@ -1,0 +1,150 @@
+//------------------------------
+// Breakpoints Variables
+//------------------------------
+
+$mdq-xs: 320px;
+$mdq-sm: 576px;
+$mdq-md: 768px;
+$mdq-lg: 992px;
+$mdq-xl: 1200px;
+$mdq-xxl: 1440px;
+
+//------------------------------
+// 320 > 576
+//------------------------------
+
+@mixin mdq-xs-sm {
+    @media (min-width: $mdq-xs) and (max-width: $mdq-sm) {
+        @content;
+    }
+}
+
+//------------------------------
+// 320 > 768
+//------------------------------
+
+@mixin mdq-xs-md {
+    @media (min-width: $mdq-xs) and (max-width: $mdq-md) {
+        @content;
+    }
+}
+
+//------------------------------
+// 320 > 992
+//------------------------------
+
+@mixin mdq-xs-lg {
+    @media (min-width: $mdq-xs) and (max-width: $mdq-lg) {
+        @content;
+    }
+}
+
+//------------------------------
+// 320 > 1200
+//------------------------------
+
+@mixin mdq-xs-xl {
+    @media (min-width: $mdq-xs) and (max-width: $mdq-xl) {
+        @content;
+    }
+}
+
+//------------------------------
+// 320 > 1440
+//------------------------------
+
+@mixin mdq-xs-xxl {
+    @media (min-width: $mdq-xs) and (max-width: $mdq-xxl) {
+        @content;
+    }
+}
+
+//------------------------------
+// 576 > 768
+//------------------------------
+
+@mixin mdq-sm-md {
+    @media (min-width: $mdq-sm) and (max-width: $mdq-md) {
+        @content;
+    }
+}
+
+//------------------------------
+// 768 > 992
+//------------------------------
+
+@mixin mdq-md-lg {
+    @media (min-width: $mdq-md) and (max-width: $mdq-lg) {
+        @content;
+    }
+}
+
+//------------------------------
+// 992 > 1200
+//------------------------------
+
+@mixin mdq-lg-xl {
+    @media (min-width: $mdq-lg) and (max-width: $mdq-xl) {
+        @content;
+    }
+}
+
+//------------------------------
+// 1200 > 1440
+//------------------------------
+
+@mixin mdq-xl-xxl {
+    @media (min-width: $mdq-xl) and (max-width: $mdq-xxl) {
+        @content;
+    }
+}
+
+//------------------------------
+// 1440 >
+//------------------------------
+
+@mixin mdq-xxl {
+    @media (min-width: $mdq-xxl) {
+        @content;
+    }
+}
+
+//------------------------------
+// 1200 >
+//------------------------------
+
+@mixin mdq-xl {
+    @media (min-width: $mdq-xl) {
+        @content;
+    }
+}
+
+//------------------------------
+// 992 >
+//------------------------------
+
+@mixin mdq-lg {
+    @media (min-width: $mdq-lg) {
+        @content;
+    }
+}
+
+//------------------------------
+// 768 >
+//------------------------------
+
+@mixin mdq-md {
+    @media (min-width: $mdq-md) {
+        @content;
+    }
+}
+
+//------------------------------
+// 576 >
+//------------------------------
+
+@mixin mdq-sm {
+    @media (min-width: $mdq-sm) {
+        @content;
+    }
+}

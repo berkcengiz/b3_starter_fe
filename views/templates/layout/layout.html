@@ -13,7 +13,10 @@
         <meta name="robots" content="index,follow" />
         <meta name="language" content="{{ProjectLang}}" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1"
+        />
         <meta name="format-detection" content="telephone=no" />
         <meta name="format-detection" content="date=no" />
         <meta name="format-detection" content="address=no" />
@@ -21,7 +24,7 @@
 
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="application-name" content="{{ProjectName}} " />
+        <meta name="application-name" content="{{ProjectName}}" />
         <meta name="apple-mobile-web-app-title" content="{{ProjectName}}" />
         <meta
             name="apple-mobile-web-app-status-bar-style"
@@ -150,7 +153,6 @@
             {% include "../partials/footer.html" %} {% block scripts %} {%
             endblock %}
         </div>
-
         <script src="src/js/lib.min.js" async></script>
         <script src="src/js/core.min.js" async></script>
     </body>
