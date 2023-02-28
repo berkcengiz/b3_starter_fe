@@ -1,3 +1,35 @@
-$grid-columns: 12;
-$grid-gutter-width: 1.5rem; // 24px
-$grid-row-columns: 6;
+@use "../helpers/breakpoints";
+
+:root {
+    --grid-dt-gutter: 24px;
+    --grid-mb-gutter: 16px;
+}
+
+.container {
+    padding-right: var(--grid-dt-gutter) !important;
+    padding-left: var(--grid-dt-gutter) !important;
+    @include breakpoints.mdq-xs-lg {
+        padding-right: var(--grid-mb-gutter) !important;
+        padding-left: var(--grid-mb-gutter) !important;
+    }
+}
+
+.row {
+    margin-right: calc(var(--grid-dt-gutter) * -1 / 2) !important;
+    margin-left: calc(var(--grid-dt-gutter) * -1 / 2) !important;
+    @include breakpoints.mdq-xs-lg {
+        margin-right: calc(var(--grid-mb-gutter) * -1 / 2) !important;
+        margin-left: calc(var(--grid-mb-gutter) * -1 / 2) !important;
+    }
+
+    > {
+        * {
+            padding-right: calc(var(--grid-dt-gutter) / 2) !important;
+            padding-left: calc(var(--grid-dt-gutter) / 2) !important;
+            @include breakpoints.mdq-xs-lg {
+                padding-right: calc(var(--grid-mb-gutter) / 2) !important;
+                padding-left: calc(var(--grid-mb-gutter) / 2) !important;
+            }
+        }
+    }
+}
