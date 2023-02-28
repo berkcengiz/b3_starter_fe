@@ -54,6 +54,7 @@ function scss() {
             })
         )
         .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write("."))
         .pipe(gulp.dest("./dist/src/css"))
         .pipe(browserSync.stream());
 }
