@@ -2,7 +2,7 @@
     &,
     &::before,
     &::after {
-        box-sizing: border-box;
+        box-sizing: inherit;
         margin: 0;
         padding: 0;
     }
@@ -13,9 +13,34 @@
     }
 }
 
+html {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body,
 input,
-select,
 textarea,
+select,
+button {
+    /* stylelint-disable */
+    -webkit-font-feature-settings: "liga", "kern";
+    -moz-font-feature-settings: "liga", "kern";
+    font-feature-settings: "liga", "kern";
+    -webkit-font-kerning: normal;
+    -moz-font-kerning: normal;
+    font-kerning: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+input,
+textarea,
+select,
 button {
     appearance: none;
     all: unset;
@@ -52,6 +77,14 @@ address {
 
 img {
     user-select: none;
+}
+
+figure {
+    margin: 0;
+}
+
+[role="button"] {
+    cursor: pointer;
 }
 
 // ios format detection

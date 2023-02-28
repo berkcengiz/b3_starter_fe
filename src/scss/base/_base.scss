@@ -1,21 +1,16 @@
 @use "../helpers";
 
-html {
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-}
-
 body {
     @include helpers.regular;
 
     background-color: helpers.$default-white;
     letter-spacing: -0.05rem;
+    text-align: left;
 }
 
 ::selection {
-    background-color: helpers.$default-black;
-    color: helpers.$default-white;
+    background-color: helpers.$selection-black;
+    color: helpers.$selection-white;
 }
 
 a {
