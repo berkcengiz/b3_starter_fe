@@ -1,0 +1,21 @@
+@mixin hide-scroll {
+    &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+        -ms-overflow-style: none; /* IE 11 */
+        scrollbar-color: transparent transparent;
+        scrollbar-width: none; /* Firefox 64 */
+    }
+
+    &::-moz-scrollbar {
+        display: none;
+    }
+}
+
+@mixin line-clamp {
+    /* stylelint-enabled */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

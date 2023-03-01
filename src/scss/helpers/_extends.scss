@@ -1,14 +1,9 @@
-.scroll-none {
-    &::-webkit-scrollbar {
-        display: none;
-        width: 0;
-        height: 0;
-        -ms-overflow-style: none; /* IE 11 */
-        scrollbar-color: transparent transparent;
-        scrollbar-width: none; /* Firefox 64 */
-    }
+@use "mixins";
 
-    &::-moz-scrollbar {
-        display: none;
-    }
+.hide-scroll {
+    @include mixins.hide-scroll;
+}
+
+.line-clamp {
+    @include mixins.line-clamp;
 }
