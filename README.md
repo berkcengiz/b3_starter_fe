@@ -36,13 +36,6 @@ $ yarn dev
 npm uninstall package-name
 ```
 
-## Gulp Create New Task
-
--   Where is my scss file
--   Pass that file through sass compiler
--   Where do I save the compiled css ?
--   Stream changes to all browser
-
 ## Prettier's Inline Ignoring Syntax
 
 For HTML,
@@ -67,6 +60,14 @@ or for CSS,
 
 ```
 /* prettier-ignore */
+```
+
+## Stylelint Ignoring Code
+
+For Css,
+
+```
+/* stylelint-enabled */
 ```
 
 ## This Will Be Improved In The New Version
