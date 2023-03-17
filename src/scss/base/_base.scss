@@ -4,13 +4,12 @@ body {
     @include helpers.regular;
 
     background-color: helpers.$theme-bg;
-    letter-spacing: -0.05rem;
     text-align: left;
 }
 
 ::selection {
-    background-color: helpers.$selection-black;
-    color: helpers.$selection-white;
+    background-color: helpers.$selection-bg;
+    color: helpers.$selection-text;
 }
 
 a {
