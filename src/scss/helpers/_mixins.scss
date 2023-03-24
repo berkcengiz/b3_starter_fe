@@ -1,4 +1,5 @@
 @mixin hide-scroll {
+    /* stylelint-enabled */
     &::-webkit-scrollbar {
         display: none;
         width: 0;
@@ -13,9 +14,19 @@
     }
 }
 
-@mixin line-clamp {
+@mixin line-clamp($line-clamp) {
     /* stylelint-enabled */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    -webkit-line-clamp: $line-clamp;
+}
+
+@mixin trans($trans...) {
+    /* stylelint-enabled */
+    -webkit-transition: $trans;
+    -moz-transition: $trans;
+    -ms-transition: $trans;
+    -o-transition: $trans;
+    transition: $trans;
 }
