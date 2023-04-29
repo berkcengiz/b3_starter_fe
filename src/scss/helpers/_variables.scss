@@ -1,56 +1,53 @@
 //------------------------------
 // Spacing
 //------------------------------
-$spacing: (
-    2: 2px,
-    4: 4px,
-    8: 8px,
-    12: 12px,
-    16: 16px,
-    24: 24px,
-    32: 32px,
-    48: 48px,
-    56: 56px,
-    64: 64px,
-    72: 72px,
-    80: 80px,
-    88: 88px,
-    96: 96px,
-    144: 144px,
-    192: 192px,
-);
+
+$sp-2: 2px;
+$sp-4: 4px;
+$sp-8: 8px;
+$sp-12: 12px;
+$sp-16: 16px;
+$sp-24: 24px;
+$sp-32: 32px;
+$sp-48: 48px;
+$sp-56: 56px;
+$sp-64: 64px;
+$sp-72: 72px;
+$sp-80: 80px;
+$sp-88: 88px;
+$sp-96: 96px;
+$sp-144: 144px;
+$sp-192: 192px;
 
 //------------------------------
 // Body Text
 //------------------------------
-$body-text: (
-    2xsmall: 10px,
-    xsmall: 12px,
-    small: 14px,
-    normal: 16px,
-    medium: 18px,
-);
+
+$fs-2xsm: 10px;
+$fs-xsm: 12px;
+$fs-sm: 14px;
+$fs-n: 16px;
+$fs-m: 18px;
 
 //------------------------------
 // Heading
 //------------------------------
-$heading: (
-    xsmall: 16px,
-    small: 18px,
-    normal: 24px,
-    medium: 32px,
-    large: 48px,
-    xlarge: 64px,
-);
+
+$h-xsm: 16px;
+$h-sm: 18px;
+$h-n: 24px;
+$h-m: 32px;
+$h-l: 48px;
+$h-xl: 64px;
 
 //------------------------------
 // Line Height
 //------------------------------
-$line-height: (
-    xsmall: 24px,
-    small: 27px,
-    normal: 32px,
-    medium: 48px,
-    large: 56px,
-    xlarge: 72px,
-);
+
+$lh-2xsm: 18px;
+$lh-xsm: 24px;
+$lh-sm: 27px;
+$lh-n: 32px;
+$lh-m: 48px;
+$lh-l: 56px;
+$lh-xl: 72px;

@@ -3,3 +3,47 @@
 .hide-scroll {
     @include mixins.hide-scroll;
 }
+
+.fs-2xsm {
+    @include mixins.fs-2xsm;
+}
+
+.fs-xsm {
+    @include mixins.fs-xsm;
+}
+
+.fs-sm {
+    @include mixins.fs-sm;
+}
+
+.fs-n {
+    @include mixins.fs-n;
+}
+
+.fs-m {
+    @include mixins.fs-m;
+}
+
+.h-xsm {
+    @include mixins.h-xsm;
+}
+
+.h-sm {
+    @include mixins.h-sm;
+}
+
+.h-n {
+    @include mixins.h-n;
+}
+
+.h-m {
+    @include mixins.h-m;
+}
+
+.h-l {
+    @include mixins.h-l;
+}
+
+.h-xl {
+    @include mixins.h-xl;
+}

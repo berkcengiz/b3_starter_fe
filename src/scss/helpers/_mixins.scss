@@ -1,3 +1,5 @@
+@use "variables";
+
 @mixin hide-scroll {
     /* stylelint-enabled */
     &::-webkit-scrollbar {
@@ -29,4 +31,67 @@
     -ms-transition: $trans;
     -o-transition: $trans;
     transition: $trans;
+}
+
+//------------------------------
+// Body Text
+//------------------------------
+
+@mixin fs-2xsm {
+    font-size: variables.$fs-2xsm;
+    line-height: normal;
+}
+
+@mixin fs-xsm {
+    font-size: variables.$fs-xsm;
+    line-height: variables.$lh-2xsm;
+}
+
+@mixin fs-sm {
+    font-size: variables.$fs-sm;
+    line-height: variables.$lh-xsm;
+}
+
+@mixin fs-n {
+    font-size: variables.$fs-n;
+    line-height: variables.$lh-xsm;
+}
+
+@mixin fs-m {
+    font-size: variables.$fs-m;
+    line-height: variables.$lh-sm;
+}
+
+//------------------------------
+// Heading
+//------------------------------
+
+@mixin h-xsm {
+    font-size: variables.$h-xsm;
+    line-height: variables.$lh-xsm;
+}
+
+@mixin h-sm {
+    font-size: variables.$h-sm;
+    line-height: variables.$lh-sm;
+}
+
+@mixin h-n {
+    font-size: variables.$h-n;
+    line-height: variables.$lh-n;
+}
+
+@mixin h-m {
+    font-size: variables.$h-m;
+    line-height: variables.$lh-m;
+}
+
+@mixin h-l {
+    font-size: variables.$h-l;
+    line-height: variables.$lh-l;
+}
+
+@mixin h-xl {
+    font-size: variables.$h-xl;
+    line-height: variables.$lh-xl;
 }
