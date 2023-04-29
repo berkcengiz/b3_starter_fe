@@ -42,13 +42,30 @@ input,
 textarea,
 select,
 button {
-    appearance: none;
-    all: unset;
+    width: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    color: inherit;
+    overflow: visible;
+    font-style: normal;
+    line-height: normal;
 
-    &:disabled {
+    /* Firefox */
+    &[type="number"] {
+        appearance: textfield;
+    }
+
+    &:disabled,
+    &[disabled] {
         pointer-events: none;
         user-select: none;
     }
+
+    /* stylelint-enabled */
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button,
@@ -65,9 +82,17 @@ button {
         }
     }
 
-    /* Firefox */
-    &[type="number"] {
-        appearance: textfield;
+    &,
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    &,
+    &:focus,
+    &:focus:not(:focus-visible),
+    &:focus:not(:-moz-focusring) {
+        outline: none;
     }
 }
 
@@ -75,7 +100,8 @@ address {
     font-style: normal;
 }
 
-img {
+img,
+svg {
     user-select: none;
     line-height: 0;
 }
@@ -97,4 +123,51 @@ a[x-apple-data-detectors] {
     font-family: inherit !important;
     font-weight: inherit !important;
     line-height: inherit !important;
+}
+
+.btn,
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    display: inline-flex;
+    width: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    user-select: none;
+    text-decoration: none;
+    background: transparent;
+    color: inherit;
+    overflow: visible;
+    font-style: normal;
+    line-height: normal;
+    font: inherit;
+    cursor: pointer;
+
+    /* stylelint-enabled */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    &,
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    &,
+    &:focus,
+    &:focus:not(:focus-visible),
+    &:focus:not(:-moz-focusring) {
+        outline: none;
+    }
+
+    &:disabled,
+    &[disabled] {
+        pointer-events: none;
+        user-select: none;
+    }
 }
