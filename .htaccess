@@ -1,0 +1,15 @@
+RewriteEngine on
+
+ErrorDocument 404 https://berkcengiz.com/404.html
+
+RewriteCond %{HTTP_HOST} ^www.berkcengiz.com [NC]
+RewriteRule ^(.*)$ https://berkcengiz.com/$1 [L,R=301,NC]
+
+RewriteBase /
+RewriteRule ^(.+)\.html$ /$1 [R,L]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ /$1.html [NC,END]
+
+RewriteCond %{HTTP_HOST} ^berkcengiz\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.berkcengiz.com/$1 [R,L]
