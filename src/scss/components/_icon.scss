@@ -1,1 +1,27 @@
 @use "../helpers" as *;
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-md {
+        width: 24px;
+        height: 24px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &-lg {
+        width: 32px;
+        height: 32px;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

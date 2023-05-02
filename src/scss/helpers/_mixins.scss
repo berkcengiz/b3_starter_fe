@@ -16,6 +16,10 @@
     }
 }
 
+@mixin scroll-off {
+    overflow: hidden;
+}
+
 @mixin line-clamp($line-clamp) {
     /* stylelint-enabled */
     display: -webkit-box;
