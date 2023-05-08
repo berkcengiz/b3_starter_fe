@@ -103,8 +103,13 @@ address {
 
 img,
 svg {
-    user-select: none;
     line-height: 0;
+}
+
+img,
+svg,
+.swiper {
+    user-select: none;
 }
 
 figure {
