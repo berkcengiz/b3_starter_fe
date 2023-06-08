@@ -51,6 +51,7 @@ button {
     overflow: visible;
     font-style: normal;
     line-height: normal;
+    resize: none;
 
     /* Firefox */
     &[type="number"] {
@@ -79,7 +80,7 @@ button {
     &:-webkit-autofill {
         &,
         &:focus {
-            box-shadow: 0 0 0 30px transparent inset;
+            box-shadow: 0 0 0 30px white inset;
         }
     }
 

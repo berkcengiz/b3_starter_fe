@@ -4,10 +4,6 @@
     @include mixins.hide-scroll;
 }
 
-.scroll-off {
-    @include mixins.scroll-off;
-}
-
 .fs-2xsm {
     @include mixins.fs-2xsm;
 }
