@@ -24,7 +24,7 @@ a {
         // Style "Default" Links
         &:not([class]) {
             color: helpers.$default-link;
-            text-decoration: underline;
+            text-decoration: none;
         }
     }
 }
@@ -40,4 +40,8 @@ video {
 
 #wrapper {
     overflow-x: hidden;
+}
+
+.autosize {
+    overflow: hidden;
 }
