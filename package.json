@@ -38,6 +38,7 @@
     "dependencies": {
         "bootstrap": "^5.2.3",
         "jquery": "^3.6.3",
+        "select2": "^4.1.0-rc.0",
         "swiper": "^9.0.2",
         "vanilla-lazyload": "^17.8.3"
     }

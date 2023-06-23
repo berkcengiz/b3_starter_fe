@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="{{ProjectLang}}" dir="{{ProjectDir}}" class="{{ProjectDir}}">
     <head>
-        <title>{{ProjectName}} {{PageTitle}}</title>
+        <title>{{PageTitle}} {{ProjectName}}</title>
 
         <meta charset="UTF-8" />
         <meta name="robots" content="index,follow" />
@@ -62,7 +62,7 @@
         <meta name="description" content="{{MetaDescription}}" />
 
         <meta property="og:url" content="{{Url}}" />
-        <meta name="og:title" content="{{ProjectName}} | {{PageTitle}}" />
+        <meta name="og:title" content="{{PageTitle}} | {{ProjectName}}" />
         <meta name="og:description" content="{{MetaDescription}}" />
         <meta property="og:site_name" content="{{ProjectName}}" />
         <meta property="og:locale" content="{{ProjectLang}}" />
@@ -71,7 +71,7 @@
         <meta property="og:image:width" content="960" />
         <meta property="og:image:height" content="640" />
 
-        <meta name="twitter:title" content="{{ProjectName}} | {{PageTitle}}" />
+        <meta name="twitter:title" content="{{PageTitle}} | {{ProjectName}}" />
         <meta name="twitter:description" content="{{MetaDescription}}" />
         <meta name="twitter:site" content="{{ProjectName}}" />
         <meta name="twitter:image" content="src/media/og/og.jpg" />
@@ -150,8 +150,10 @@
 
             <main class="{{PageClass}}">{% block content %}{% endblock %}</main>
 
-            {% include "../partials/footer.html" %} {% block scripts %} {%
-            endblock %}
+            <!-- prettier-ignore -->
+            {% include "../partials/footer.html" %}
+            
+            {% block scripts %}{% endblock %}
         </div>
         <script src="src/js/lib.min.js"></script>
         <script src="src/js/core.min.js"></script>

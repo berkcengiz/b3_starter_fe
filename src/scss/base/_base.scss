@@ -14,13 +14,6 @@ body {
 
 a {
     &[href] {
-        // Use Attribute Selectors with Empty Links
-        &:empty {
-            &::before {
-                content: attr(href);
-            }
-        }
-
         // Style "Default" Links
         &:not([class]) {
             color: helpers.$default-link;

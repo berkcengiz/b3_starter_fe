@@ -13,6 +13,7 @@ const { src, series, parallel, dest, watch } = require("gulp");
 // file paths
 const files = {
     htmlPath: "./views/pages/**/*.+(html|nunjucks)",
+    htmlWatchPath: "./views/**/**/*.+(html|nunjucks)",
     scssPath: "./src/scss/**/*.scss",
     jsCorePath: "./src/javascript/**/*.js",
     mediaPath: "./src/media/**/**",
@@ -24,6 +25,7 @@ const files = {
         "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
         "node_modules/vanilla-lazyload/dist/lazyload.min.js",
         "node_modules/swiper/swiper-bundle.min.js",
+        // "node_modules/select2/dist/js/select2.min.js",
     ],
 };
 
@@ -105,7 +107,7 @@ function watchTask() {
             baseDir: "./dist/",
         },
     });
-    gulp.watch(files.htmlPath, html).on("change", browserSync.reload);
+    gulp.watch(files.htmlWatchPath, html).on("change", browserSync.reload);
     gulp.watch(files.scssPath, scss).on("change", browserSync.reload);
     gulp.watch(files.jsCorePath, jsCore).on("change", browserSync.reload);
     gulp.watch(files.jsLibPath, jsLib).on("change", browserSync.reload);
