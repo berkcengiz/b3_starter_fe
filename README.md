@@ -70,8 +70,9 @@ For Css,
 /* stylelint-enabled */
 ```
 
-## This Will Be Improved In The New Version
+## Latest Updates
 
--   build alırken hatayı bastırmak
--   taskleri senkron çalıştırmak (scssda hata varken diğer taskler çalışmasın)
--   log kaydetmek
+-   Icon new size.
+-   Full rounded variable change.
+-   Stylebook and page list development.
+-   Gulpfile.js update.

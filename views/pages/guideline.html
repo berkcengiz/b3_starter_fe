@@ -1,0 +1,202 @@
+<!-- prettier-ignore -->
+{% extends "templates/layout/layout-guideline.html" %}
+
+{% set GuidelineNav = 
+    [
+        {
+            title: 'Typography',
+            link: 'typography'
+        },
+        {
+            title: 'Icons',
+            link: 'icons'
+        },
+        {
+            title: 'Buttons',
+            link: 'buttons'
+        }
+    ]
+%}
+
+{% set PageList = 
+    [
+        {
+            title: 'Home',
+            link: 'javascript:;',
+            status: 'backlog'
+        },
+        {
+            title: 'About',
+            link: 'javascript:;',
+            status: 'todo'
+        },
+        {
+            title: 'Contact Us',
+            link: 'javascript:;',
+            status: 'inProgress'
+        },
+        {
+            title: 'Blog',
+            link: 'javascript:;',
+            status: 'inReview'
+        },
+        {
+            title: 'Blog Detail',
+            link: 'javascript:;',
+            status: 'done'
+        },
+        {
+            title: 'News',
+            link: 'javascript:;',
+            status: 'canceled'
+        }
+    ]
+%}
+
+{% block content %}
+
+<section class="guideSec" id="typography">
+    <div class="guideSec__wrapper">
+        <div class="guideSec__main">
+            <div class="guideSec__heading">
+                <div class="guideSec__container">
+                    <div class="guideSec__heading-contain">
+                        <div class="guideSec__heading-title">
+                            <span>1.0</span>
+                            <h2>Typography</h2>
+                        </div>
+                        <div class="guideSec__heading-article">
+                            <p>
+                                Headlines, subtitles, body, and captions are
+                                creating a cohesive typography experience for
+                                your product.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="guideSec__content">
+                <div class="guideSec__container">
+                    <div class="guideSec__content-contain"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="guideSec" id="icons">
+    <div class="guideSec__wrapper">
+        <div class="guideSec__main">
+            <div class="guideSec__heading">
+                <div class="guideSec__container">
+                    <div class="guideSec__heading-contain">
+                        <div class="guideSec__heading-title">
+                            <span>2.0</span>
+                            <h2>Icons</h2>
+                        </div>
+                        <div class="guideSec__heading-article">
+                            <p>
+                                Icons are used to communicate an application, a
+                                capability, or some other concept or specific
+                                entity with meaning for the user.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="guideSec__content">
+                <div class="guideSec__container">
+                    <div class="guideSec__content-contain">
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="icon icon-md">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.9499 23.9157C18.8721 23.8246 20.5747 23.3855 21.9775 21.977C23.3802 20.5739 23.8193 18.8709 23.9156 16.9483C24.0281 14.9668 24.0281 9.03313 23.9156 7.05166C23.8247 5.12907 23.3856 3.42608 21.9775 2.02297C20.5747 0.619907 18.8721 0.180756 16.9499 0.0843703C14.9689 -0.0281235 9.0311 -0.0281235 7.05006 0.0843703C5.13328 0.175369 3.43067 0.614517 2.02254 2.01763C0.614403 3.42074 0.180677 5.12373 0.084312 7.04632C-0.028104 9.0278 -0.028104 14.9668 0.084312 16.9483C0.175344 18.8709 0.614403 20.5739 2.02254 21.977C3.43067 23.3801 5.12795 23.8192 7.05006 23.9157C9.0311 24.0281 14.9689 24.0281 16.9499 23.9157ZM12.0026 21.8378C10.2572 21.8378 6.50398 21.977 4.92983 21.3558C3.88044 20.9381 3.07194 20.1294 2.64899 19.0744C2.02255 17.4946 2.16711 13.7458 2.16711 12C2.16711 10.2541 2.02788 6.50006 2.64899 4.92557C3.06661 3.87594 3.87505 3.06726 4.92983 2.64422C6.50931 2.01763 10.2572 2.16224 12.0026 2.16224C13.7481 2.16224 17.5014 2.02297 19.0755 2.64422C20.1249 3.06192 20.9334 3.87056 21.3564 4.92557C21.9828 6.5054 21.8383 10.2541 21.8383 12C21.8383 13.7458 21.9828 17.4999 21.3564 19.0744C20.9388 20.124 20.1303 20.9327 19.0755 21.3558C17.496 21.9824 13.7481 21.8378 12.0026 21.8378ZM18.4063 7.03022C19.1987 7.03022 19.8412 6.39296 19.8412 5.59499C19.8412 4.80241 19.1987 4.15976 18.4063 4.15976C17.6139 4.15976 16.9713 4.80241 16.9713 5.59499C16.9713 6.38757 17.6085 7.03022 18.4063 7.03022ZM12.0026 18.1533C15.4079 18.1533 18.1546 15.406 18.1546 12C18.1546 8.59398 15.4079 5.8467 12.0026 5.8467C8.59742 5.8467 5.85075 8.59398 5.85075 12C5.85075 15.406 8.59742 18.1533 12.0026 18.1533ZM12.0026 16.0004C9.80211 16.0004 8.00313 14.2064 8.00313 12C8.00313 9.7936 9.79678 7.99956 12.0026 7.99956C14.2086 7.99956 16.0022 9.7936 16.0022 12C16.0022 14.2064 14.2032 16.0004 12.0026 16.0004Z"
+                                        fill="#0A0D2C"
+                                    />
+                                </svg>
+                            </i>
+                            <i class="icon icon-md">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M5.35714 24V7.94631H0.375V24H5.35714ZM2.83929 5.79866C4.44643 5.79866 5.73214 4.45638 5.73214 2.84564C5.73214 1.28859 4.44643 0 2.83929 0C1.28571 0 0 1.28859 0 2.84564C0 4.45638 1.28571 5.79866 2.83929 5.79866ZM23.9464 24H24V15.1946C24 10.8993 23.0357 7.57047 18 7.57047C15.5893 7.57047 13.9821 8.91275 13.2857 10.1477H13.2321V7.94631H8.46428V24H13.4464V16.0537C13.4464 13.9597 13.8214 11.9732 16.3929 11.9732C18.9643 11.9732 19.0179 14.3356 19.0179 16.2148V24H23.9464Z"
+                                        fill="#0A0D2C"
+                                    />
+                                </svg>
+                            </i>
+                            <i class="icon icon-md">
+                                <svg
+                                    width="12"
+                                    height="24"
+                                    viewBox="0 0 12 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M11.2145 13.5L11.8255 9.1875H7.94182V6.375C7.94182 5.15625 8.46546 4.03125 10.2109 4.03125H12V0.328125C12 0.328125 10.3855 0 8.85818 0C5.67273 0 3.57818 2.10938 3.57818 5.85938V9.1875H0V13.5H3.57818V24H7.94182V13.5H11.2145Z"
+                                        fill="#0A0D2C"
+                                    />
+                                </svg>
+                            </i>
+                            <i class="icon icon-md">
+                                <svg
+                                    width="24"
+                                    height="18"
+                                    viewBox="0 0 24 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M21.5577 4.46747C22.4971 3.81687 23.3425 3.03614 24 2.1253C23.1546 2.47229 22.1683 2.73253 21.182 2.81928C22.2153 2.25542 22.9667 1.38795 23.3425 0.303614C22.4031 0.824096 21.3229 1.21446 20.2427 1.43133C19.3033 0.520482 18.0352 0 16.6262 0C13.9022 0 11.6947 2.03855 11.6947 4.55422C11.6947 4.9012 11.7417 5.24819 11.8356 5.59518C7.74951 5.37831 4.08611 3.55663 1.64384 0.824096C1.22114 1.4747 0.986301 2.25542 0.986301 3.12289C0.986301 4.68434 1.8317 6.07229 3.19374 6.89639C2.3953 6.85301 1.59687 6.67952 0.939335 6.33253V6.3759C0.939335 8.58795 2.63014 10.4096 4.88454 10.8434C4.50881 10.9301 4.03914 11.0169 3.61644 11.0169C3.28767 11.0169 3.00587 10.9735 2.6771 10.9301C3.28767 12.7518 5.11937 14.053 7.27984 14.0964C5.58904 15.3108 3.47554 16.0482 1.17417 16.0482C0.751468 16.0482 0.375734 16.0048 0 15.9614C2.16047 17.2626 4.74364 18 7.56164 18C16.6262 18 21.5577 11.1036 21.5577 5.0747C21.5577 4.85783 21.5577 4.68434 21.5577 4.46747Z"
+                                        fill="#0A0D2C"
+                                    />
+                                </svg>
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="guideSec" id="buttons">
+    <div class="guideSec__wrapper">
+        <div class="guideSec__main">
+            <div class="guideSec__heading">
+                <div class="guideSec__container">
+                    <div class="guideSec__heading-contain">
+                        <div class="guideSec__heading-title">
+                            <span>3.0</span>
+                            <h2>Buttons</h2>
+                        </div>
+                        <div class="guideSec__heading-article">
+                            <p>
+                                Buttons communicate actions that users can take.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="guideSec__content">
+                <div class="guideSec__container">
+                    <div class="guideSec__content-contain"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

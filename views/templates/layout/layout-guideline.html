@@ -1,0 +1,615 @@
+<!-- prettier-ignore -->
+{% set ProjectName = 'Project Name' %}
+{% set ProjectLang = 'tr' %}
+{% set ProjectDir = 'ltr' %}
+
+<!DOCTYPE html>
+<html lang="{{ProjectLang}}" dir="{{ProjectDir}}" class="{{ProjectDir}}">
+    <head>
+        <title>Guideline - {{ProjectName}}</title>
+
+        <meta charset="UTF-8" />
+        <meta name="robots" content="nofollow" />
+        <meta name="language" content="{{ProjectLang}}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1"
+        />
+
+        <link rel="stylesheet" href="src/css/style.min.css" type="text/css" />
+
+        <style>
+            :root {
+                --default-white: #fff;
+                --default-link: #0c8ce9;
+                --primary-dark: #191919;
+                --grayscale-1: #fafafa;
+                --grayscale-2: #e7e7ea;
+                --grayscale-3: #adadad;
+                --status-inProgress: #ebcb62;
+                --status-inReview: #367642;
+                --status-done: #606acb;
+                --status-canceled: #ed353d;
+            }
+            .guidelineBody {
+                background: var(--default-white);
+                letter-spacing: -0.02em;
+            }
+            .guidelineBody .uppTitle {
+                font-size: 12px;
+                line-height: 18px;
+                font-weight: 500;
+                color: var(--grayscale-3);
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                display: inline-block;
+            }
+            .guidelineBody .uppTitle-mb {
+                margin-bottom: 6px;
+            }
+            .guideHead__wrapper,
+            .guideSec__wrapper,
+            .guidePopup__wrapper {
+                position: relative;
+                overflow: hidden;
+            }
+            .guideHead__container,
+            .guideSec__container,
+            .guidePopup__container {
+                max-width: calc(1440px + 48px);
+                margin: 0 auto;
+                padding: 0 16px;
+            }
+            @media (min-width: 320px) and (max-width: 991px) {
+                .guideHead__container,
+                .guideSec__container,
+                .guidePopup__container {
+                    padding: 0 16px;
+                }
+            }
+            .guideHead {
+                position: relative;
+                z-index: 1;
+            }
+            .guideHead__wrapper {
+                background: var(--default-white);
+                box-shadow: 0 8px 16px rgba(133, 134, 150, 0.08);
+            }
+            .guideHead__main {
+                padding: 96px 0 32px;
+            }
+            @media (min-width: 320px) and (max-width: 767px) {
+                .guideHead__main {
+                    padding-top: 64px;
+                }
+            }
+            .guideHead__heading {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+            @media (min-width: 320px) and (max-width: 767px) {
+                .guideHead__heading {
+                    flex-direction: column-reverse;
+                }
+            }
+            .guideHead__heading-title h1 {
+                font-size: 72px;
+                line-height: 76px;
+                font-weight: bold;
+                color: var(--primary-dark);
+                letter-spacing: -0.04em;
+                margin: 0;
+            }
+            @media (min-width: 320px) and (max-width: 767px) {
+                .guideHead__heading-title h1 {
+                    font-size: 64px;
+                    line-height: 68px;
+                }
+            }
+            .guideHead__heading-title span {
+                display: block;
+                font-size: 56px;
+                color: var(--grayscale-3);
+                font-weight: 400;
+            }
+            @media (min-width: 320px) and (max-width: 767px) {
+                .guideHead__heading-title span {
+                    font-size: 48px;
+                }
+            }
+            .guideHead__heading-version {
+                padding-top: 12px;
+            }
+            .guideHead__nav {
+                margin-top: 48px;
+            }
+            .guideHead__nav-menu {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+            .guideHead__nav-menu__item {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+                border-radius: 4px;
+                min-height: 36px;
+                padding: 6px 16px;
+                color: var(--primary-dark);
+                border: 1px solid var(--grayscale-2);
+                transition: background 0.1s ease-out, box-shadow 0.1s ease-out,
+                    border-color 0.2s ease-out;
+                text-decoration: none;
+            }
+            .guideHead__nav-menu__item:hover {
+                background: var(--grayscale-2);
+                border-color: var(--grayscale-3);
+                box-shadow: inset 0 0 3px 1px rgba(173, 173, 173, 0.09);
+            }
+            .guideSec__heading {
+                background: var(--grayscale-1);
+            }
+            .guideSec__heading-contain {
+                padding: 32px 0;
+            }
+            .guideSec__heading-title h2,
+            .guideSec__heading-article h2,
+            .guideSec__heading-title p,
+            .guideSec__heading-article p,
+            .guideSec__heading-title span,
+            .guideSec__heading-article span {
+                font-size: 16px;
+                line-height: 24px;
+            }
+            .guideSec__heading-title {
+                display: flex;
+                align-items: center;
+            }
+            .guideSec__heading-title h2,
+            .guideSec__heading-title span {
+                font-weight: 700;
+                color: var(--primary-dark);
+            }
+            .guideSec__heading-title span {
+                margin-right: 6px;
+            }
+            .guideSec__heading-article {
+                font-weight: 400;
+                color: var(--grayscale-3);
+                margin-top: 4px;
+            }
+            .guideSec__content {
+                background: var(--default-white);
+            }
+            .guideSec__content-contain {
+                padding: 32px 0 64px;
+            }
+            .guidePopup__btn {
+                position: fixed;
+                bottom: 24px;
+                right: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px 24px;
+                background: rgba(255, 255, 255, 0.2);
+                border: 1px solid var(--grayscale-2);
+                backdrop-filter: saturate(100%) blur(20px);
+                /* stylelint-enabled */
+                -webkit-backdrop-filter: saturate(100%) blur(20px);
+                box-shadow: 0 8px 16px rgba(133, 134, 150, 0.08);
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 400;
+                color: var(--primary-dark);
+                z-index: 1;
+                border-radius: 50px;
+                text-decoration: none;
+                transition: box-shadow 0.1s ease-out, background 0.1s ease-out;
+            }
+            @media (min-width: 320px) and (max-width: 991px) {
+                .guidePopup__btn {
+                    bottom: 16px;
+                    right: 16px;
+                }
+            }
+            .guidePopup__btn:hover {
+                box-shadow: none;
+            }
+            .guidePopup__btn .icon {
+                transition: transform 0.1s ease-out;
+            }
+            .guidePopup__wrapper {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                background: rgba(25, 25, 25, 0.6);
+            }
+            .guidePopup__wrapper:not(.show) {
+                display: none;
+            }
+            .guidePopup__wrapper,
+            .guidePopup__container,
+            .guidePopup__main {
+                width: 100%;
+                height: 100%;
+            }
+            .guidePopup__main {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+            .guidePopup__container {
+                max-width: calc(460px + 48px);
+            }
+            @media (min-width: 320px) and (max-width: 991px) {
+                .guidePopup__container {
+                    max-width: calc(460px + 32px);
+                }
+            }
+            .guidePopup__contain {
+                width: 100%;
+                height: 430px;
+                overflow-y: scroll;
+                flex-direction: column;
+                justify-content: space-between;
+                box-shadow: 0 16px 16px -6px rgba(25, 25, 25, 0.1);
+                /* stylelint-enabled */
+            }
+            .guidePopup__contain::-webkit-scrollbar {
+                display: none;
+                width: 0;
+                height: 0;
+                -ms-overflow-style: none;
+                /* IE 11 */
+                scrollbar-color: transparent transparent;
+                scrollbar-width: none;
+                /* Firefox 64 */
+            }
+            .guidePopup__contain::-moz-scrollbar {
+                display: none;
+            }
+            .guidePopup__contain,
+            .guidePopup__contain-header,
+            .guidePopup__contain-header__close,
+            .guidePopup__contain-footer {
+                display: flex;
+            }
+            .guidePopup__contain,
+            .guidePopup__contain-header,
+            .guidePopup__contain-footer {
+                background: var(--default-white);
+            }
+            .guidePopup__contain,
+            .guidePopup__contain-header__close {
+                border-radius: 4px;
+            }
+            .guidePopup__contain-header,
+            .guidePopup__contain-header__close,
+            .guidePopup__contain-footer {
+                align-items: center;
+            }
+            .guidePopup__contain-header,
+            .guidePopup__contain-footer {
+                height: 42px;
+                padding: 0 8px 0 16px;
+                justify-content: space-between;
+            }
+            .guidePopup__contain-header,
+            .guidePopup__contain-down {
+                position: sticky;
+                left: 0;
+            }
+            .guidePopup__contain-header {
+                top: 0;
+                border-bottom: 1px solid var(--grayscale-2);
+            }
+            .guidePopup__contain-header__title h3 {
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 500;
+                color: var(--primary-dark);
+                padding-right: 32px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .guidePopup__contain-header__close {
+                width: 26px;
+                height: 26px;
+                justify-content: center;
+                transition: background 0.1s ease-out;
+            }
+            .guidePopup__contain-header__close:hover {
+                background: var(--grayscale-2);
+            }
+            .guidePopup__contain-footer__link {
+                display: inline-flex;
+                align-items: center;
+                font-size: 12px;
+                line-height: 18px;
+                font-weight: 400;
+                color: var(--default-link);
+                text-decoration: none;
+            }
+            .guidePopup__contain-footer__link:hover {
+                text-decoration: underline;
+            }
+            .guidePopup__contain-footer__link .icon {
+                margin-right: 6px;
+            }
+            .guidePopup__contain-body {
+                padding: 16px 0;
+            }
+            .guidePopup__contain-body ul {
+                list-style-type: none;
+            }
+            .guidePopup__contain-body ul li a {
+                display: flex;
+                align-items: center;
+                height: 32px;
+                padding: 0 16px;
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 400;
+                color: var(--primary-dark);
+                text-decoration: none;
+                transition: background 0.1s ease-out;
+            }
+            .guidePopup__contain-body ul li a:hover {
+                background: var(--grayscale-2);
+            }
+            .guidePopup__contain-body
+                ul
+                li
+                a:not(.inProgress):not(.inReview):not(.done) {
+                pointer-events: none;
+                color: var(--grayscale-3);
+            }
+            .guidePopup__contain-body ul li a p,
+            .guidePopup__contain-body ul li a span {
+                width: 100%;
+            }
+            .guidePopup__contain-body ul li a p {
+                max-width: 50%;
+                padding-right: 32px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .guidePopup__contain-body ul li a span {
+                color: var(--grayscale-3);
+                max-width: 50%;
+                display: flex;
+                align-items: center;
+            }
+            .guidePopup__contain-body ul li a span::before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50px;
+                margin-right: 6px;
+                border: 2px solid var(--default-white);
+            }
+            .guidePopup__contain-body ul li a span.backlog::before {
+                background: var(--default-white);
+                border-color: var(--grayscale-2);
+            }
+            .guidePopup__contain-body ul li a span.backlog::after {
+                content: "Backlog";
+            }
+            .guidePopup__contain-body ul li a span.todo::before {
+                background: var(--grayscale-2);
+            }
+            .guidePopup__contain-body ul li a span.todo::after {
+                content: "Todo";
+            }
+            .guidePopup__contain-body ul li a span.inProgress::before {
+                background: var(--status-inProgress);
+            }
+            .guidePopup__contain-body ul li a span.inProgress::after {
+                content: "In Progress";
+            }
+            .guidePopup__contain-body ul li a span.inReview::before {
+                background: var(--status-inReview);
+            }
+            .guidePopup__contain-body ul li a span.inReview::after {
+                content: "In Review";
+            }
+            .guidePopup__contain-body ul li a span.done::before {
+                background: var(--status-done);
+            }
+            .guidePopup__contain-body ul li a span.done::after {
+                content: "Done";
+            }
+            .guidePopup__contain-body ul li a span.canceled::before {
+                background: var(--status-canceled);
+            }
+            .guidePopup__contain-body ul li a span.canceled::after {
+                content: "Canceled";
+                text-decoration: line-through;
+            }
+            .guidePopup__contain-down {
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body class="guidelineBody">
+        <div id="guidelineWrapper">
+            <section class="guideHead">
+                <div class="guideHead__wrapper">
+                    <div class="guideHead__container">
+                        <div class="guideHead__main">
+                            <div class="guideHead__heading">
+                                <div class="guideHead__heading-title">
+                                    <h1>
+                                        Stylebook
+                                        <span>{{ProjectName}}</span>
+                                    </h1>
+                                </div>
+                                <div class="guideHead__heading-version">
+                                    <span class="uppTitle">VERSION 1.0</span>
+                                </div>
+                            </div>
+                            <div class="guideHead__nav">
+                                <div class="guideHead__nav-title">
+                                    <span class="uppTitle uppTitle-mb"
+                                        >JUMP TO:</span
+                                    >
+                                </div>
+                                <div class="guideHead__nav-menu">
+                                    {% for GuidelineNavItem in GuidelineNav %}
+                                    <a
+                                        href="#{{GuidelineNavItem.link}}"
+                                        class="guideHead__nav-menu__item"
+                                    >
+                                        {{GuidelineNavItem.title}}
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- prettier-ignore -->
+            {% block content %}{% endblock %}
+            {% block scripts %}{% endblock %}
+
+            <section class="guidePopup">
+                <a href="javascript:;" class="guidePopup__btn"> Page List </a>
+                <div class="guidePopup__wrapper">
+                    <div class="guidePopup__container">
+                        <div class="guidePopup__main">
+                            <div class="guidePopup__contain">
+                                <div class="guidePopup__contain-up">
+                                    <div class="guidePopup__contain-header">
+                                        <div
+                                            class="guidePopup__contain-header__title"
+                                        >
+                                            <h3>Page List</h3>
+                                        </div>
+                                        <div
+                                            class="guidePopup__contain-header__close"
+                                        >
+                                            <i class="icon icon-xsm">
+                                                <svg
+                                                    width="13"
+                                                    height="13"
+                                                    viewBox="0 0 13 13"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M0.653035 0.652965C0.857055 0.448984 1.1878 0.449016 1.39179 0.653035L6.49903 5.76125L11.6083 0.652965C11.8123 0.448984 12.1431 0.449016 12.347 0.653035C12.551 0.857055 12.551 1.1878 12.347 1.39179L7.23826 6.49951L12.347 11.6082C12.551 11.8123 12.551 12.143 12.347 12.347C12.143 12.551 11.8123 12.551 11.6082 12.347L6.5 7.23875L1.39175 12.347C1.18775 12.551 0.857 12.551 0.653 12.347C0.449 12.143 0.449 11.8123 0.653 11.6082L5.76076 6.50049L0.652965 1.39171C0.448984 1.1877 0.449016 0.856946 0.653035 0.652965Z"
+                                                        fill="#191919"
+                                                    />
+                                                </svg>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="guidePopup__contain-body">
+                                        <ul>
+                                            {% for PageListItem in PageList %}
+                                            <li>
+                                                <a
+                                                    href="#{{PageListItem.link}}"
+                                                    class="{{PageListItem.status}}"
+                                                >
+                                                    <p>
+                                                        {{PageListItem.title}}
+                                                    </p>
+                                                    <span
+                                                        class="{{PageListItem.status}}"
+                                                    ></span>
+                                                </a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="guidePopup__contain-down">
+                                    <div class="guidePopup__contain-footer">
+                                        <a
+                                            href="javascript:;"
+                                            class="guidePopup__contain-footer__link"
+                                        >
+                                            <i class="icon icon-xsm">
+                                                <svg
+                                                    width="18"
+                                                    height="18"
+                                                    viewBox="0 0 18 18"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M6.5 6.5V16H16V6.5H6.5ZM5.39541 5.39541C5.64858 5.14223 5.99196 5 6.35 5H16.15C16.508 5 16.8514 5.14223 17.1046 5.39541C17.3578 5.64858 17.5 5.99196 17.5 6.35V16.15C17.5 16.508 17.3578 16.8514 17.1046 17.1046C16.8514 17.3578 16.508 17.5 16.15 17.5H6.35C5.99196 17.5 5.64858 17.3578 5.39541 17.1046C5.14223 16.8514 5 16.508 5 16.15V6.35C5 5.99196 5.14223 5.64858 5.39541 5.39541Z"
+                                                        fill="#0c8ce9"
+                                                    />
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M0.395406 0.395406C0.64858 0.142232 0.991957 0 1.35 0H11.15C11.508 0 11.8514 0.142231 12.1046 0.395406C12.3578 0.648581 12.5 0.991959 12.5 1.35V5.75C12.5 6.16421 12.1642 6.5 11.75 6.5C11.3358 6.5 11 6.16421 11 5.75V1.5H1.5V11H5.75C6.16421 11 6.5 11.3358 6.5 11.75C6.5 12.1642 6.16421 12.5 5.75 12.5H1.35C0.991959 12.5 0.648581 12.3578 0.395406 12.1046C0.142231 11.8514 0 11.508 0 11.15V1.35C0 0.991957 0.142232 0.64858 0.395406 0.395406Z"
+                                                        fill="#0c8ce9"
+                                                    />
+                                                </svg>
+                                            </i>
+                                            Copy link
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="src/js/lib.min.js"></script>
+        <script src="src/js/core.min.js"></script>
+        <script>
+            $(".guidePopup__btn, .guidePopup__contain-header__close").on(
+                "click",
+                function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $(".guidePopup__wrapper").toggleClass("show");
+                }
+            );
+
+            $(document).on("click", function (e) {
+                var container = $(".guidePopup__contain");
+                if (!$(e.target).closest(container).length) {
+                    $(".guidePopup__wrapper").removeClass("show");
+                }
+            });
+
+            $(".guidePopup__contain-footer__link").click(function () {
+                var url = window.location.href;
+                // Geçici bir input alanı oluştur
+                var tempInput = $("<input>");
+                $("body").append(tempInput);
+                // Değer olarak URL'yi ata ve seç
+                tempInput.val(url).select();
+                // Kopyala
+                document.execCommand("copy");
+                // Geçici input alanını kaldır
+                tempInput.remove();
+                // Kopyalandı mesajını göster
+                alert("URL copied");
+            });
+        </script>
+    </body>
+</html>
