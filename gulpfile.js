@@ -3,7 +3,6 @@ const sass = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const cleanCSS = require("gulp-clean-css");
-const htmlmin = require("gulp-htmlmin");
 const rename = require("gulp-rename");
 const sourcemaps = require("gulp-sourcemaps");
 const nunjucksRender = require("gulp-nunjucks-render");
@@ -25,7 +24,7 @@ const files = {
         "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
         "node_modules/vanilla-lazyload/dist/lazyload.min.js",
         "node_modules/swiper/swiper-bundle.min.js",
-        // "node_modules/select2/dist/js/select2.min.js",
+        "node_modules/select2/dist/js/select2.min.js",
     ],
 };
 
@@ -38,7 +37,6 @@ function html() {
                 path: ["views"],
             })
         )
-        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("./dist"))
         .pipe(browserSync.stream());
 }
