@@ -22,6 +22,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: $line-clamp;
+    word-break: break-all;
 }
 
 @mixin trans($trans...) {
