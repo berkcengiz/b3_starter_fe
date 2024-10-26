@@ -76,7 +76,7 @@ function jsLib() {
 // Media Task
 function media() {
     return gulp
-        .src(files.mediaPath)
+        .src(files.mediaPath, { encoding: false })
         .pipe(gulp.dest("./dist/src/media"))
         .pipe(browserSync.stream());
 }
