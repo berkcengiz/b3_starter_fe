@@ -19,6 +19,7 @@
     "homepage": "https://github.com/berkcengiz/b3_starter_fe#readme",
     "devDependencies": {
         "browser-sync": "^3.0.3",
+        "glob": "^11.0.0",
         "gulp": "^5.0.0",
         "gulp-clean-css": "^4.3.0",
         "gulp-concat": "^2.6.1",
@@ -29,18 +30,18 @@
         "gulp-uglify": "^3.0.2",
         "gulp-uglify-es": "^3.0.0",
         "prettier": "2.8.3",
+        "rimraf": "^6.0.1",
         "sass": "^1.80.4",
         "stylelint": "^14.16.1",
         "stylelint-config-prettier": "^9.0.4",
         "stylelint-config-standard": "^29.0.0"
     },
     "dependencies": {
+        "@barba/core": "^2.10.3",
         "bootstrap": "^5.3.3",
-        "glob": "^11.0.0",
-        "jquery": "^3.6.3",
-        "rimraf": "^6.0.1",
+        "jquery": "^3.7.1",
         "select2": "^4.1.0-rc.0",
-        "swiper": "^9.0.2",
+        "swiper": "^11.1.14",
         "vanilla-lazyload": "^17.8.3"
     }
 }

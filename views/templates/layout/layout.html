@@ -144,11 +144,13 @@
 
         <link rel="stylesheet" href="src/css/style.min.css" type="text/css" />
     </head>
-    <body class="{{PageClass}}">
+    <body class="{{PageClass}}" data-barba="wrapper">
         <div id="wrapper">
             {% include "../partials/header.html" %}
 
-            <main class="{{PageClass}}">{% block content %}{% endblock %}</main>
+            <main class="{{PageClass}}" data-barba="container">
+                {% block content %}{% endblock %}
+            </main>
 
             <!-- prettier-ignore -->
             {% include "../partials/footer.html" %}

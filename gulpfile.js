@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
-const uglify = require("gulp-uglify-es").default; // gulp-uglify-es kullanımı
+const uglify = require("gulp-uglify-es").default;
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const sourcemaps = require("gulp-sourcemaps");
@@ -24,6 +24,7 @@ const files = {
         "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
         "node_modules/vanilla-lazyload/dist/lazyload.min.js",
         "node_modules/swiper/swiper-bundle.min.js",
+        "node_modules/@barba/core/dist/barba.umd.js",
     ],
 };
 
