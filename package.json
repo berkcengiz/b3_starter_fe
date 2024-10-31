@@ -40,6 +40,7 @@
         "@barba/core": "^2.10.3",
         "bootstrap": "^5.3.3",
         "jquery": "^3.7.1",
+        "jquery.cookie": "^1.4.1",
         "select2": "^4.1.0-rc.0",
         "swiper": "^11.1.14",
         "vanilla-lazyload": "^17.8.3"
