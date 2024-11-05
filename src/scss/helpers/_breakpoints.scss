@@ -43,7 +43,7 @@
 //------------------------------
 
 @mixin mdq-xs-xxl {
-    @media (min-width: 320px) and (max-width: 1439px) {
+    @media (min-width: 320px) and (max-width: 1440px) {
         @content;
     }
 }
@@ -83,7 +83,7 @@
 //------------------------------
 
 @mixin mdq-xl-xxl {
-    @media (min-width: 1200px) and (max-width: 1439px) {
+    @media (min-width: 1200px) and (max-width: 1440px) {
         @content;
     }
 }
